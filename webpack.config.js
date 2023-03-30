@@ -20,6 +20,15 @@ module.exports = {
   devServer: {
     contentBase: './dist',
     open: true
-  }
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
+
 
 };

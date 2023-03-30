@@ -1,6 +1,4 @@
-// Lodash, now imported by this script
-// import _ from 'lodash';
-// import './style.css';
+import './style.css';
 
 // Constants and variables
 const tasksList = document.getElementById('tasks-list');

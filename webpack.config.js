@@ -17,10 +17,14 @@ module.exports = {
   output: {
     clean: true
   },
-  devServer: {
-    contentBase: './dist',
-    open: true
+  optimization: {
+    runtimeChunk: 'single',
   },
+
+ devServer: {
+    static: './dist',
+  },
+
   module: {
     rules: [
       {

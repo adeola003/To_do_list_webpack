@@ -1,41 +1,25 @@
 import './style.css';
+import {
+  addTask, loadFromStorage, add,
+  removeTask, displayTasks, clearCompleted,
+} from './functions.js';
 
-// Constants and variables
-const tasksList = document.getElementById('tasks-list');
-// const userEntry = document.getElementById('user-entry');
-// const addTask = document.getElementById('add-task');
+// load tasks from the storage
 
-// Array of objects containing tasks details
-const tasksInfo = [
-  {
-    description: 'Join my standup call',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'Complete some Javascript challenges',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Run errands for home',
-    completed: false,
-    index: 2,
-  },
-];
+loadFromStorage();
 
-const displaysTasks = () => {
-  tasksInfo.forEach((task) => {
-    const listElement = document.createElement('li');
-    listElement.classList.add('list-element');
-    listElement.innerHTML = `
-        <label for="task${task.index}">
-            <input id="task${task.index}" type="checkbox"> ${task.description}
-        </label>
-        `;
-    tasksList.appendChild(listElement);
-  });
-  // console.log(tasksList);
-};
+// event listener to add new tasks
+addTask.addEventListener('click', add);
 
-displaysTasks();
+// display the tasks list
+
+displayTasks();
+
+// change completed status when the checkbox is checked or not
+
+// const checkbox = document.getElementById('check');
+// checkbox.addEventListener;
+
+// Clear completed tasks
+
+clearCompleted.addEventListener('click', removeTask);

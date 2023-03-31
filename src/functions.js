@@ -49,6 +49,9 @@ const displayTasks = () => {
   tasksArray.forEach((task) => {
     const taskElement = document.createElement('div');
     taskElement.classList.add('task-div');
+    taskElement.style.display = 'flex';
+    taskElement.style.columnGap = '10px';
+    taskElement.style.alignItems = 'baseline';
     taskElement.innerHTML = `
         <input id="check" type="checkbox">
         <p>Book title: ${task.description}</p>

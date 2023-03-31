@@ -1,4 +1,4 @@
-// import { from } from "webpack-sources/lib/CompatSource";
+import "./style.css"
 import {tasksArray, tasksContainer, userEntry, addTask, updateStorage, loadFromStorage, add, removeTask, displayTasks, clearCompleted} from "./functions.js";
 
 // load tasks from the storage

@@ -1,4 +1,3 @@
-
 let tasksArray = [];
 const tasksContainer = document.getElementById('tasks-container');
 const userEntry = document.getElementById('user-entry');
@@ -19,19 +18,18 @@ const add = () => {
   task.id = tasksArray.length;
   tasksArray.push(task);
   updateStorage(tasksArray);
-  console.log(tasksArray);
 };
-
-// Remove completed tasks function (i did not realize this was for the next project)
-
-// const removeCompTask = () => {
-//   tasksArray = tasksArray.filter((task) => task.completed !== true);
-//   updateStorage(tasksArray);
-// };
 
 // remove a task from the array
 const removeTask = (id) => {
   tasksArray = tasksArray.filter((task) => task.id !== id);
+  updateStorage(tasksArray);
+};
+
+// function to changed the status of the task
+const toggleCompleted = (id) => {
+  const task = tasksArray.find((t) => t.id === id);
+  task.completed = !task.completed;
   updateStorage(tasksArray);
 };
 
@@ -52,7 +50,7 @@ const displayTasks = () => {
         `;
 
     tasksContainer.appendChild(taskElement);
-    //checkbox feature
+    // checkbox feature
 
     const checkbox = taskElement.querySelector(`#check-${task.id}`);
     checkbox.addEventListener('change', () => {
@@ -61,10 +59,10 @@ const displayTasks = () => {
 
     // clear completed
     clearCompleted.addEventListener('click', () => {
-    tasksArray = tasksArray.filter((task) => task.completed === false);
-    updateStorage(tasksArray);
-    displayTasks();
-});
+      tasksArray = tasksArray.filter((task) => task.completed === false);
+      updateStorage(tasksArray);
+      displayTasks();
+    });
     // remove task feature
     const toTrash = taskElement.querySelector('.remove');
     toTrash.addEventListener('click', () => {
@@ -82,15 +80,10 @@ const loadFromStorage = () => {
     displayTasks();
   }
 };
-const toggleCompleted = (id) => {
-  const task = tasksArray.find((t) => t.id === id);
-  task.completed = !task.completed;
-  updateStorage(tasksArray);
-};
 
 export {
   tasksContainer, userEntry,
   addTask, clearCompleted,
   updateStorage, loadFromStorage,
-  add, removeTask, displayTasks, toggleCompleted
+  add, removeTask, displayTasks, toggleCompleted,
 };

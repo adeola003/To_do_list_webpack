@@ -1,7 +1,7 @@
 import './style.css';
 import {
   addTask, loadFromStorage, add,
-   displayTasks, clearCompleted, updateStorage
+  displayTasks,
 } from './functions.js';
 
 // load tasks from the storage

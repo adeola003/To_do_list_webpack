@@ -1,6 +1,6 @@
 body {
   background-color: aquamarine;
-};
+}
 
 .task-div {
   display: flex;
@@ -9,11 +9,9 @@ body {
 }
 
 .remove {
-  height: fit-content;
+  height: 25px;
 }
 
 ul {
   list-style: none;
 }
-
-

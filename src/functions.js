@@ -8,39 +8,31 @@ const clearCompleted = document.getElementById('clear');
 
 const updateStorage = (data) => {
   localStorage.setItem('tasks', JSON.stringify(data));
-}
-
-const loadFromStorage = () => {
-  const storedTasksList = localStorage.getItem('tasks');
-  if (storedTasksList) {
-    tasksArray = JSON.parse(storedTasksList);
-    displayTasks();
-  }
-}
+};
 
 // Function to add new tasks
 const add = () => {
-  const task = { description: '', completed: '', id:''};
+  const task = { description: '', completed: '', id: '' };
   task.description = userEntry.value;
   task.completed = false;
-  task.id = tasksArray.length
+  task.id = tasksArray.length;
   tasksArray.push(task);
   updateStorage(tasksArray);
   console.log(tasksArray);
-}
+};
 
 // Remove completed tasks function (i did not realize this was for the next project)
 
-const removeCompTask = () => {
-  tasksArray = tasksArray.filter((task) => task.completed !== true);
-  updateStorage(tasksArray);
-}
+// const removeCompTask = () => {
+//   tasksArray = tasksArray.filter((task) => task.completed !== true);
+//   updateStorage(tasksArray);
+// };
 
-//remove a task from the array
+// remove a task from the array
 const removeTask = (id) => {
   tasksArray = tasksArray.filter((task) => task.id !== id);
   updateStorage(tasksArray);
-}
+};
 
 // Function to display the book's list
 
@@ -64,7 +56,16 @@ const displayTasks = () => {
       displayTasks();
     });
   });
-}
+};
+
+// load from storage
+const loadFromStorage = () => {
+  const storedTasksList = localStorage.getItem('tasks');
+  if (storedTasksList) {
+    tasksArray = JSON.parse(storedTasksList);
+    displayTasks();
+  }
+};
 
 // Event listener to add books
 
@@ -81,4 +82,9 @@ const displayTasks = () => {
 // document.addEventListener('DOMContentLoaded', () => {
 //   loadFromStorage();
 // });
-export {tasksArray, tasksContainer, userEntry, addTask, clearCompleted, updateStorage, loadFromStorage, add, removeTask, displayTasks}
+export {
+  tasksContainer, userEntry,
+  addTask, clearCompleted,
+  updateStorage, loadFromStorage,
+  add, removeTask, displayTasks,
+};

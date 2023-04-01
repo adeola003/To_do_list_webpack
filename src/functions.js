@@ -17,20 +17,29 @@ const add = () => {
   task.completed = false;
   task.id = tasksArray.length;
   tasksArray.push(task);
+  // update the id of the remaining tasks
+  tasksArray.forEach((task, index) => {
+    task.id = index;
+  });
+
   updateStorage(tasksArray);
-  console.log(tasksArray);
 };
-
-// Remove completed tasks function (i did not realize this was for the next project)
-
-// const removeCompTask = () => {
-//   tasksArray = tasksArray.filter((task) => task.completed !== true);
-//   updateStorage(tasksArray);
-// };
 
 // remove a task from the array
 const removeTask = (id) => {
   tasksArray = tasksArray.filter((task) => task.id !== id);
+  // update the id of the remaining tasks
+  tasksArray.forEach((task, index) => {
+    task.id = index;
+  });
+
+  updateStorage(tasksArray);
+};
+
+// function to changed the status of the task
+const toggleCompleted = (id) => {
+  const task = tasksArray.find((t) => t.id === id);
+  task.completed = !task.completed;
   updateStorage(tasksArray);
 };
 
@@ -45,11 +54,31 @@ const displayTasks = () => {
     taskElement.style.columnGap = '10px';
     taskElement.style.alignItems = 'baseline';
     taskElement.innerHTML = `
-        <input id="check" type="checkbox">
-        <p>Book title: ${task.description}</p>
+        <input id="check-${task.id}" type="checkbox" ${task.completed ? 'checked' : ''}>
+        <p>Task description: ${task.description}</p>
         <button class="remove" id=remove-task>Remove</button>
         `;
+
     tasksContainer.appendChild(taskElement);
+    // checkbox feature
+
+    const checkbox = taskElement.querySelector(`#check-${task.id}`);
+    checkbox.addEventListener('change', () => {
+      toggleCompleted(task.id);
+    });
+
+    // clear completed
+    clearCompleted.addEventListener('click', () => {
+      tasksArray = tasksArray.filter((task) => task.completed === false);
+      // update the id of the remaining tasks
+      tasksArray.forEach((task, index) => {
+        task.id = index;
+      });
+
+      updateStorage(tasksArray);
+      displayTasks();
+    });
+    // remove task feature
     const toTrash = taskElement.querySelector('.remove');
     toTrash.addEventListener('click', () => {
       removeTask(task.id);
@@ -67,24 +96,9 @@ const loadFromStorage = () => {
   }
 };
 
-// Event listener to add books
-
-// submitBtn.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   if (bookTitle.value !== '' && author.value !== '') {
-//     addBooks(bookTitle.value, author.value);
-//     form.reset();
-//     displayBooks();
-//   } else {
-//     alert('fill the required fields before submiting!');
-//   }
-// });
-// document.addEventListener('DOMContentLoaded', () => {
-//   loadFromStorage();
-// });
 export {
   tasksContainer, userEntry,
   addTask, clearCompleted,
   updateStorage, loadFromStorage,
-  add, removeTask, displayTasks,
+  add, removeTask, displayTasks, toggleCompleted,
 };

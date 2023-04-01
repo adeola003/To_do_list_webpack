@@ -17,12 +17,23 @@ const add = () => {
   task.completed = false;
   task.id = tasksArray.length;
   tasksArray.push(task);
+  // update the id of the remaining tasks
+    tasksArray.forEach((task, index) => {
+    task.id = index;
+  });
+
   updateStorage(tasksArray);
+  
 };
 
 // remove a task from the array
 const removeTask = (id) => {
   tasksArray = tasksArray.filter((task) => task.id !== id);
+  // update the id of the remaining tasks
+    tasksArray.forEach((task, index) => {
+    task.id = index;
+  });
+
   updateStorage(tasksArray);
 };
 
@@ -60,6 +71,11 @@ const displayTasks = () => {
     // clear completed
     clearCompleted.addEventListener('click', () => {
       tasksArray = tasksArray.filter((task) => task.completed === false);
+      // update the id of the remaining tasks
+      tasksArray.forEach((task, index) => {
+      task.id = index;
+  });
+
       updateStorage(tasksArray);
       displayTasks();
     });

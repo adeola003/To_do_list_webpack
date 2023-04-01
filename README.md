@@ -61,9 +61,9 @@
 
 <!-- LIVE DEMO -->
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a> -->
+## 🚀 Live Demo <a name="live-demo"></a>
 
-<!-- - [Coming soon](#) -->
+- [https://adeola003.github.io/To_do_list_webpack/](#)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -105,11 +105,11 @@ Install this project with:
 3. You can see it in the browser
 ```
 
-<!-- ### Build for production
+### Build for production
 
 ```
 npm run build
-``` -->
+```
 
 ### Run tests
 

@@ -1,0 +1,17 @@
+body {
+  background-color: aquamarine;
+}
+
+.task-div {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.remove {
+  height: 25px;
+}
+
+ul {
+  list-style: none;
+}

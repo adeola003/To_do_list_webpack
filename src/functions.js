@@ -46,7 +46,7 @@ const toggleCompleted = (id) => {
 // Function to display the book's list
 
 const displayTasks = () => {
-  document.getElementById('tasks-container').innerHTML = '';
+  tasksContainer.innerHTML = '';
   tasksArray.forEach((task) => {
     const taskElement = document.createElement('div');
     taskElement.classList.add('task-div');

@@ -33,11 +33,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Awesome_books] <a name="about-project"></a>
+# 📖 [To_do_list] <a name="about-project"></a>
 
-**[Awesome_books]** This project is basic website that allows users to add/remove tasks from a to do from a list.
+**[To_do_list]** This project is basic website that allows users to add/remove tasks from a to do from a list and used the webpack technology.
 
-## 🛠 Built With <a name="HTML, CSS, and Javascript"></a>
+## 🛠 Built With <a name="HTML, CSS, Javascript and Webpack"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -56,6 +56,7 @@
 
 - [x] Create a collection that keeps a list of tasks
 - [x] Display all tasks saved in the collection in the top part of the page.
+- [x] Used webpack technology.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -86,8 +87,8 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 ```sh
-  git https://github.com/adeola003/To_do_list.git
-  cd Awesome_books
+  git https://github.com/adeola003/To_do_list_webpack.git
+  cd To_do_list_webpack
 ```
 ### Install
 

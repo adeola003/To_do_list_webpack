@@ -116,3 +116,6 @@ export {
   updateStorage, loadFromStorage,
   add, removeTask, displayTasks, toggleCompleted, stringLength
 };
+
+// Part 2 adding tests for clear all completed and local storage update
+

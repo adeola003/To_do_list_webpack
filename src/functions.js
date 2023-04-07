@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 let tasksArray = [];
 const tasksContainer = document.getElementById('tasks-container');
 const addTask = document.getElementById('add-task');
@@ -111,5 +112,5 @@ export {
   addTask, clearCompleted, userEntry,
   updateStorage, loadFromStorage,
   add, removeTask, displayTasks, toggleCompleted, stringLength,
-  tasksArray
+  tasksArray,
 };

@@ -1,8 +1,8 @@
 let tasksArray = [];
 const tasksContainer = document.getElementById('tasks-container');
-const userEntry = document.getElementById('user-entry');
 const addTask = document.getElementById('add-task');
 const clearCompleted = document.getElementById('clear');
+const userEntry = document.getElementById('user-entry');
 
 // Storage
 
@@ -11,11 +11,9 @@ const updateStorage = (data) => {
 };
 
 // Function to add new tasks
-const add = () => {
+const add = (newDescription) => { 
   const task = { description: '', completed: '', id: '' };
-  if (userEntry !== null) {
-    task.description = userEntry.value;
-  }
+  task.description = newDescription;
   task.completed = false;
   task.id = tasksArray.length;
   tasksArray.push(task);
@@ -111,8 +109,8 @@ const stringLength = (string) => {
 };
 
 export {
-  tasksContainer, userEntry,
-  addTask, clearCompleted,
+  tasksContainer,
+  addTask, clearCompleted, userEntry, 
   updateStorage, loadFromStorage,
   add, removeTask, displayTasks, toggleCompleted, stringLength
 };

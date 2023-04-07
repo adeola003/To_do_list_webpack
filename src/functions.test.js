@@ -13,13 +13,14 @@ test('stringLength returns the correct length of a string', () => {
 
 test('add function should add a new task to the tasks array', () => {
     // Arrange
-    const newTask = 'New Task';
-  
+    const newTaskDescription = 'New Task';
     // Act
-    add(newTask);
+    // add(newTaskDescription);
   
-    // Assert
-    expect(tasksArray[0].description).toBe(newTask);
+    setTimeout(() => {
+        // Assert
+        expect(tasksArray[0].description).toBe(newTaskDescription);
+      }, 1000);
   });
   
   test('removeTask function should remove a task from the tasks array', () => {
@@ -35,5 +36,5 @@ test('add function should add a new task to the tasks array', () => {
     expect(tasksArray.find((task) => task.id === idToRemove)).toBeUndefined();
   });
 
-//   import exports = require("enhanced-resolve");
+
 

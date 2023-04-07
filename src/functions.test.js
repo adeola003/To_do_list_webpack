@@ -2,7 +2,9 @@ global.TextEncoder = require('util').TextEncoder;
 global.TextDecoder = require('util').TextDecoder;
 
 const { JSDOM } = require('jsdom');
-import { add, removeTask, stringLength, tasksArray } from "./functions";
+import { add, removeTask} from "./functions";
+
+let tasksArray = [];
 
 test('stringLength returns the correct length of a string', () => {
   // test code here

@@ -13,7 +13,9 @@ const updateStorage = (data) => {
 // Function to add new tasks
 const add = () => {
   const task = { description: '', completed: '', id: '' };
-  task.description = userEntry.value;
+  if (userEntry !== null) {
+    task.description = userEntry.value;
+  }
   task.completed = false;
   task.id = tasksArray.length;
   tasksArray.push(task);
@@ -27,13 +29,15 @@ const add = () => {
 
 // remove a task from the array
 const removeTask = (id) => {
-  tasksArray = tasksArray.filter((task) => task.id !== id);
+  if (tasksArray !== undefined) {
+    tasksArray = tasksArray.filter((task) => task.id !== id);
   // update the id of the remaining tasks
   tasksArray.forEach((task, index) => {
     task.id = index;
   });
 
   updateStorage(tasksArray);
+}
 };
 
 // function to changed the status of the task

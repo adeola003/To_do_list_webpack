@@ -11,7 +11,7 @@ const updateStorage = (data) => {
 };
 
 // Function to add new tasks
-const add = (newDescription) => { 
+const add = (newDescription) => {
   const task = { description: '', completed: '', id: '' };
   task.description = newDescription;
   task.completed = false;
@@ -29,13 +29,13 @@ const add = (newDescription) => {
 const removeTask = (id) => {
   if (tasksArray !== undefined) {
     tasksArray = tasksArray.filter((task) => task.id !== id);
-  // update the id of the remaining tasks
-  tasksArray.forEach((task, index) => {
-    task.id = index;
-  });
+    // update the id of the remaining tasks
+    tasksArray.forEach((task, index) => {
+      task.id = index;
+    });
 
-  updateStorage(tasksArray);
-}
+    updateStorage(tasksArray);
+  }
 };
 
 // function to changed the status of the task
@@ -99,18 +99,16 @@ const loadFromStorage = () => {
 };
 
 const stringLength = (string) => {
-  if(string.length >= 1 && string.length <= 10){
-      return string.length
+  if (string.length >= 1 && string.length <= 10) {
+    return string.length;
   }
-  else {
-      throw new Error('String must be at least1 character long and not longer than 10')
-  }
-  
+
+  throw new Error('String must be at least1 character long and not longer than 10');
 };
 
 export {
   tasksContainer,
-  addTask, clearCompleted, userEntry, 
+  addTask, clearCompleted, userEntry,
   updateStorage, loadFromStorage,
-  add, removeTask, displayTasks, toggleCompleted, stringLength
+  add, removeTask, displayTasks, toggleCompleted, stringLength,
 };

@@ -15,7 +15,7 @@ test('add function should add a new task to the tasks array', () => {
     // Arrange
     const newTaskDescription = 'New Task';
     // Act
-    // add(newTaskDescription);
+    add(newTaskDescription);
   
     setTimeout(() => {
         // Assert

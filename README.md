@@ -2,7 +2,6 @@
 
 <div align="center">
 
-
   <h3><b>To do list</b></h3>
 
 </div>
@@ -73,12 +72,12 @@
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
-  
-  
+
 ### Prerequisites
 
 In order to run this project you need:
-  Open terminal on the same folder of the project and run:
+Open terminal on the same folder of the project and run:
+
 ```sh
  npm install
 ```
@@ -86,22 +85,24 @@ In order to run this project you need:
 ### Setup
 
 Clone this repository to your desired folder:
+
 ```sh
   git https://github.com/adeola003/To_do_list_webpack.git
   cd To_do_list_webpack
 ```
+
 ### Install
 
 Install this project with:
+
 ```sh
   npm install
 ```
 
 ### Usage
 
-
 ```
-1. download the project from clone 
+1. download the project from clone
 2. open live server for the project
 3. You can see it in the browser
 ```
@@ -119,17 +120,23 @@ npm run build
 To run tests, run the following command:
 
 To check for html errors run:
+
 ```sh
   npx hint .
 ```
+
 To check for css errors run:
+
 ```sh
   npx stylelint "**/*.{css,scss}"
 ```
+
 To check for js errors run:
+
 ```sh
   npx eslint .
 ```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
@@ -142,13 +149,19 @@ To check for js errors run:
 - Twitter: [@twitterhandle](https://twitter.com/khadaf6)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/abdel-khafid-salaou-a18396161)
 
+👤 **Rushema Anicet**
+
+- GitHub: [@githubhandle](https://github.com/rushemaa)
+- Twitter: [@twitterhandle](https://twitter.com/rushemaa)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rushema-anicet-77494088)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [x] Add test to the project using jest 
+- [x] Add test to the project using jest
 - [x] Add the live demo for the project
 - [x] Add new some features to the project
 
@@ -203,4 +216,3 @@ Thanks to the code reviewers hat are helping us to improve and to all the microv
 This project is [MIT](./LICENSE.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-

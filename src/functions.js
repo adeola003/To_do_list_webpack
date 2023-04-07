@@ -111,4 +111,5 @@ export {
   addTask, clearCompleted, userEntry,
   updateStorage, loadFromStorage,
   add, removeTask, displayTasks, toggleCompleted, stringLength,
+  tasksArray
 };

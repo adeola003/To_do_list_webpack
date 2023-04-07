@@ -1,7 +1,7 @@
 import './style.css';
 import {
   addTask, loadFromStorage, add,
-  displayTasks,
+  displayTasks, userEntry,
 } from './functions.js';
 
 // load tasks from the storage
@@ -9,7 +9,11 @@ import {
 loadFromStorage();
 
 // event listener to add new tasks
-addTask.addEventListener('click', add);
+
+addTask.addEventListener('click', () => {
+  const taskDescr = userEntry.value;
+  add(taskDescr);
+});
 
 // display the tasks list
 

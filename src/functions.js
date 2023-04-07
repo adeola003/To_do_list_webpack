@@ -1,8 +1,9 @@
+// eslint-disable-next-line
 let tasksArray = [];
 const tasksContainer = document.getElementById('tasks-container');
-const userEntry = document.getElementById('user-entry');
 const addTask = document.getElementById('add-task');
 const clearCompleted = document.getElementById('clear');
+const userEntry = document.getElementById('user-entry');
 
 // Storage
 
@@ -11,9 +12,9 @@ const updateStorage = (data) => {
 };
 
 // Function to add new tasks
-const add = () => {
+const add = (newDescription) => {
   const task = { description: '', completed: '', id: '' };
-  task.description = userEntry.value;
+  task.description = newDescription;
   task.completed = false;
   task.id = tasksArray.length;
   tasksArray.push(task);
@@ -27,13 +28,15 @@ const add = () => {
 
 // remove a task from the array
 const removeTask = (id) => {
-  tasksArray = tasksArray.filter((task) => task.id !== id);
-  // update the id of the remaining tasks
-  tasksArray.forEach((task, index) => {
-    task.id = index;
-  });
+  if (tasksArray !== undefined) {
+    tasksArray = tasksArray.filter((task) => task.id !== id);
+    // update the id of the remaining tasks
+    tasksArray.forEach((task, index) => {
+      task.id = index;
+    });
 
-  updateStorage(tasksArray);
+    updateStorage(tasksArray);
+  }
 };
 
 // function to changed the status of the task
@@ -96,9 +99,18 @@ const loadFromStorage = () => {
   }
 };
 
+const stringLength = (string) => {
+  if (string.length >= 1 && string.length <= 10) {
+    return string.length;
+  }
+
+  throw new Error('String must be at least1 character long and not longer than 10');
+};
+
 export {
-  tasksContainer, userEntry,
-  addTask, clearCompleted,
+  tasksContainer,
+  addTask, clearCompleted, userEntry,
   updateStorage, loadFromStorage,
-  add, removeTask, displayTasks, toggleCompleted,
+  add, removeTask, displayTasks, toggleCompleted, stringLength,
+  tasksArray,
 };

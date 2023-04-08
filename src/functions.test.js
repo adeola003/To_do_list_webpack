@@ -109,6 +109,25 @@ describe("Part 2 adding tests for the clear completed, status change functions",
     });
   });
 
+  describe('Clear all completed function', () => {
+    test('clearCompleted function should remove all completed tasks from the tasks array', () => {
+      // Arrange
+      const task1 = { description: 'Task 1', completed: true, id: 0 };
+      const task2 = { description: 'Task 2', completed: false, id: 1 };
+      const task3 = { description: 'Task 3', completed: true, id: 2 };
+      tasksArray.push(task1);
+      tasksArray.push(task2);
+      tasksArray.push(task3);
+      const expectedLength = 1;
 
+      // Act
+      clearCompleted.click();
+
+      // Assert
+      expect(tasksArray.length).toBe(expectedLength);
+      expect(tasksArray.find((task) => task.id === task1.id)).toBeUndefined();
+      expect(tasksArray.find((task) => task.id === task3.id)).toBeUndefined();
+    });
+  });
 
 })

@@ -189,15 +189,15 @@ If you like this feel free to follow me on github and give this project a star..
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Thanks to the code reviewers hat are helping us to improve and to all the microverse team.
+- Thanks to the Microverse team for the great curriculum.
+- Thanks to the Code Reviewer(s) for the insightful feedbacks.
+- Hat tip to anyone whose code was used.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
 
 <!-- ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
 
 - **[How_to_start]**
 

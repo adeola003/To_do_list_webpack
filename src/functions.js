@@ -21,8 +21,6 @@ const add = (newDescription) => {
   tasksArray.forEach((task, index) => {
     task.id = index;
   });
-  console.log(tasksArray)
-
   updateStorage(tasksArray);
 };
 
@@ -39,7 +37,6 @@ const removeTask = (id) => {
   }
 };
 
-
 // function to changed the status of the task
 const toggleCompleted = (id) => {
   const task = tasksArray.find((t) => t.id === id);
@@ -53,7 +50,7 @@ const clearTasks = () => {
   tasksArray.forEach((task, index) => {
     task.id = index;
   });
-}
+};
 
 // Function to display the book's list
 
@@ -79,13 +76,11 @@ const displayTasks = () => {
       toggleCompleted(task.id);
     });
 
-
     // clear completed
-    clearCompleted.addEventListener('click', () =>{
+    clearCompleted.addEventListener('click', () => {
       clearTasks();
       updateStorage(tasksArray);
       displayTasks();
-
     });
     // remove task feature
     const toTrash = taskElement.querySelector('.remove');

@@ -1,7 +1,7 @@
 import './style.css';
 import {
   addTask, loadFromStorage, add,
-  displayTasks, userEntry, tasksArray
+  displayTasks, userEntry,
 } from './functions.js';
 
 // load tasks from the storage
@@ -11,7 +11,7 @@ loadFromStorage();
 // event listener to add new tasks
 addTask.addEventListener('click', () => {
   const newDescription = userEntry.value;
-  if(newDescription !== ''){
+  if (newDescription !== '') {
     add(newDescription);
   }
 });

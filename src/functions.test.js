@@ -1,4 +1,3 @@
-
 // eslint-disable-next-line
 import { add, removeTask, tasksArray, clearCompleted, toggleCompleted, clearTasks } from './functions';
 
@@ -91,11 +90,10 @@ describe('DOM manipulation', () => {
   });
 });
 
-//Part 2
+// Part 2
 
-describe("Part 2 adding tests for the clear completed, status change functions", () => {
+describe('Part 2 adding tests for the clear completed, status change functions', () => {
   describe('Task description editing function', () => {
-    
     test('toggleCompleted function should toggle the completed status of a task', () => {
       // Arrange
       const task = { description: 'New Task', completed: false, id: 0 };
@@ -127,5 +125,4 @@ describe("Part 2 adding tests for the clear completed, status change functions",
       expect(tasksArray.length).toBe(expectedLength);
     });
   });
-
-})
+});

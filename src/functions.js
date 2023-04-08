@@ -99,18 +99,9 @@ const loadFromStorage = () => {
   }
 };
 
-const stringLength = (string) => {
-  if (string.length >= 1 && string.length <= 10) {
-    return string.length;
-  }
-
-  throw new Error('String must be at least1 character long and not longer than 10');
-};
-
 export {
   tasksContainer,
   addTask, clearCompleted, userEntry,
   updateStorage, loadFromStorage,
-  add, removeTask, displayTasks, toggleCompleted, stringLength,
-  tasksArray,
+  add, removeTask, displayTasks, toggleCompleted, tasksArray,
 };

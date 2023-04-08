@@ -1,6 +1,6 @@
 
 // eslint-disable-next-line
-import { add, removeTask, tasksArray } from './functions';
+import { add, removeTask, tasksArray, clearCompleted, toggleCompleted } from './functions';
 
 global.TextEncoder = require('util').TextEncoder;
 global.TextDecoder = require('util').TextDecoder;
@@ -90,3 +90,25 @@ describe('DOM manipulation', () => {
     });
   });
 });
+
+//Part 2
+
+describe("Part 2 adding tests for the clear completed, status change functions", () => {
+  describe('Task description editing function', () => {
+    
+    test('toggleCompleted function should toggle the completed status of a task', () => {
+      // Arrange
+      const task = { description: 'New Task', completed: false, id: 0 };
+      tasksArray.push(task);
+
+      // Act
+      toggleCompleted(task.id);
+
+      // Assert
+      expect(tasksArray[0].completed).toBe(true);
+    });
+  });
+
+
+
+})

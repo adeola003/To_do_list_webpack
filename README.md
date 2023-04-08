@@ -173,7 +173,7 @@ To check for js errors run:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](././issues/).
+Feel free to check the [https://github.com/adeola003/To_do_list_webpack/issues](././issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

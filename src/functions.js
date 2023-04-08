@@ -13,8 +13,7 @@ const updateStorage = (data) => {
 
 // Function to add new tasks
 const add = (newDescription) => {
-  const task = { description: '', completed: '', id: '' };
-  task.description = newDescription;
+  const task = { description: newDescription, completed: '', id: '' };
   task.completed = false;
   task.id = tasksArray.length;
   tasksArray.push(task);
@@ -22,6 +21,7 @@ const add = (newDescription) => {
   tasksArray.forEach((task, index) => {
     task.id = index;
   });
+  console.log(tasksArray)
 
   updateStorage(tasksArray);
 };
@@ -39,12 +39,21 @@ const removeTask = (id) => {
   }
 };
 
+
 // function to changed the status of the task
 const toggleCompleted = (id) => {
   const task = tasksArray.find((t) => t.id === id);
   task.completed = !task.completed;
   updateStorage(tasksArray);
 };
+
+const clearTasks = () => {
+  tasksArray = tasksArray.filter((task) => task.completed === false);
+  // update the id of the remaining tasks
+  tasksArray.forEach((task, index) => {
+    task.id = index;
+  });
+}
 
 // Function to display the book's list
 
@@ -70,16 +79,13 @@ const displayTasks = () => {
       toggleCompleted(task.id);
     });
 
-    // clear completed
-    clearCompleted.addEventListener('click', () => {
-      tasksArray = tasksArray.filter((task) => task.completed === false);
-      // update the id of the remaining tasks
-      tasksArray.forEach((task, index) => {
-        task.id = index;
-      });
 
+    // clear completed
+    clearCompleted.addEventListener('click', () =>{
+      clearTasks();
       updateStorage(tasksArray);
       displayTasks();
+
     });
     // remove task feature
     const toTrash = taskElement.querySelector('.remove');
@@ -100,7 +106,7 @@ const loadFromStorage = () => {
 };
 
 export {
-  tasksContainer,
+  clearTasks,
   addTask, clearCompleted, userEntry,
   updateStorage, loadFromStorage,
   add, removeTask, displayTasks, toggleCompleted, tasksArray,

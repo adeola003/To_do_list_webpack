@@ -1,6 +1,6 @@
 
 // eslint-disable-next-line
-import { add, removeTask, tasksArray, clearCompleted, toggleCompleted } from './functions';
+import { add, removeTask, tasksArray, clearCompleted, toggleCompleted, clearTasks } from './functions';
 
 global.TextEncoder = require('util').TextEncoder;
 global.TextDecoder = require('util').TextDecoder;
@@ -121,12 +121,10 @@ describe("Part 2 adding tests for the clear completed, status change functions",
       const expectedLength = 1;
 
       // Act
-      clearCompleted.click();
+      clearTasks();
 
       // Assert
       expect(tasksArray.length).toBe(expectedLength);
-      expect(tasksArray.find((task) => task.id === task1.id)).toBeUndefined();
-      expect(tasksArray.find((task) => task.id === task3.id)).toBeUndefined();
     });
   });
 

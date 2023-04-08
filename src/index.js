@@ -14,6 +14,7 @@ addTask.addEventListener('click', () => {
   if (newDescription !== '') {
     add(newDescription);
   }
+
 });
 
 // display the tasks list

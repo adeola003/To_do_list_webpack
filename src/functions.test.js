@@ -86,6 +86,7 @@ describe('DOM manipulation', () => {
 
       // Assert
       expect(tasksArray.length).toBe(0);
+
     });
   });
 });

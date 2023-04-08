@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { add, removeTask, tasksArray } from './functions';
+import { add, removeTask, tasksArray, clearCompleted, toggleCompleted, clearTasks } from './functions';
 
 global.TextEncoder = require('util').TextEncoder;
 global.TextDecoder = require('util').TextDecoder;
@@ -86,6 +86,43 @@ describe('DOM manipulation', () => {
 
       // Assert
       expect(tasksArray.length).toBe(0);
+    });
+  });
+});
+
+// Part 2
+
+describe('Part 2 adding tests for the clear completed, status change functions', () => {
+  describe('Task description editing function', () => {
+    test('toggleCompleted function should toggle the completed status of a task', () => {
+      // Arrange
+      const task = { description: 'New Task', completed: false, id: 0 };
+      tasksArray.push(task);
+
+      // Act
+      toggleCompleted(task.id);
+
+      // Assert
+      expect(tasksArray[0].completed).toBe(true);
+    });
+  });
+
+  describe('Clear all completed function', () => {
+    test('clearCompleted function should remove all completed tasks from the tasks array', () => {
+      // Arrange
+      const task1 = { description: 'Task 1', completed: true, id: 0 };
+      const task2 = { description: 'Task 2', completed: false, id: 1 };
+      const task3 = { description: 'Task 3', completed: true, id: 2 };
+      tasksArray.push(task1);
+      tasksArray.push(task2);
+      tasksArray.push(task3);
+      const expectedLength = 1;
+
+      // Act
+      clearTasks();
+
+      // Assert
+      expect(tasksArray.length).toBe(expectedLength);
     });
   });
 });

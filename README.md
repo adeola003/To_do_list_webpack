@@ -149,12 +149,6 @@ To check for js errors run:
 - Twitter: [@twitterhandle](https://twitter.com/khadaf6)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/abdel-khafid-salaou-a18396161)
 
-👤 **Rushema Anicet**
-
-- GitHub: [@githubhandle](https://github.com/rushemaa)
-- Twitter: [@twitterhandle](https://twitter.com/rushemaa)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rushema-anicet-77494088)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -173,7 +167,7 @@ To check for js errors run:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](././issues/).
+Feel free to check the [issue page](https://github.com/adeola003/To_do_list_webpack/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -189,15 +183,15 @@ If you like this feel free to follow me on github and give this project a star..
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Thanks to the code reviewers hat are helping us to improve and to all the microverse team.
+- Thanks to the Microverse team for the great curriculum.
+- Thanks to the Code Reviewer(s) for the insightful feedbacks.
+- Hat tip to anyone whose code was used.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
 
 <!-- ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
 
 - **[How_to_start]**
 

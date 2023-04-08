@@ -9,10 +9,11 @@ import {
 loadFromStorage();
 
 // event listener to add new tasks
-
 addTask.addEventListener('click', () => {
-  const taskDescr = userEntry.value;
-  add(taskDescr);
+  const newDescription = userEntry.value;
+  if (newDescription !== '') {
+    add(newDescription);
+  }
 });
 
 // display the tasks list

@@ -149,12 +149,6 @@ To check for js errors run:
 - Twitter: [@twitterhandle](https://twitter.com/khadaf6)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/abdel-khafid-salaou-a18396161)
 
-👤 **Rushema Anicet**
-
-- GitHub: [@githubhandle](https://github.com/rushemaa)
-- Twitter: [@twitterhandle](https://twitter.com/rushemaa)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rushema-anicet-77494088)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
